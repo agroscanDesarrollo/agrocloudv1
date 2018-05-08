@@ -1,0 +1,63 @@
+<div class="col-lg-6">
+  <h1>{{ title }}</h1>
+
+<div class="alert alert-succes" *ngIf="status == 'success'">
+    Usuario registrado correctamente, click 
+    <a [routerLink]="['/login']">aqui </a> para ingresar.
+</div>
+<div class="alert alert-danger" *ngIf="status == 'error'">
+    <h3>Error al guardar</h3>
+</div>
+
+  <form #registerForm="ngForm" (ngSubmit)="onSubmit()" class="col-lg-10">
+    <p>
+      <label for="nom">Nombre</label>
+      <input type="text" name="name" #name="ngModel" [(ngModel)]="user.name" id="nom" class="form-control" required>
+      <span *ngIf="!name.valid && name.touched">El nombre es obligatorio</span>
+    </p>
+    <p>
+      <label for="ap">Apellidos</label>
+      <input type="text" name="surname" #surname="ngModel" [(ngModel)]="user.surname" id="ap" class="form-control" required>
+      <span *ngIf="!surname.valid && surname.touched">El apellido es obligatorio</span>
+    </p>
+    <p>
+      <label for="mail">Correo electrónico</label>
+      <input type="email" name="email" #email="ngModel" [(ngModel)]="user.email" id="mail" class="form-control" required>
+      <span *ngIf="!email.valid && email.touched">El email no es correcta</span>
+    </p>
+    <p>
+      <label for="pass">Password</label>
+      <input type="password" name="password" #password="ngModel"[(ngModel)]="user.password" id="pass" class="form-control" required>
+      <span *ngIf="!password.valid && password.touched">la contraseña no es correcta</span>
+    </p>
+
+
+
+    <p>
+      <label for="telf">Telefono</label>
+      <input type="text" name="telefono" #phone="ngModel"[(ngModel)]="user.phone" id="telf" class="form-control" required>
+      <span *ngIf="!phone.valid && phone.touched">El numero telefonico no es correcto</span>
+    </p>
+    <p>
+      <label for="pais">Pais</label>
+      <input type="text" name="pais" #country="ngModel"[(ngModel)]="user.country" id="pais" class="form-control" required>
+      <span *ngIf="!country.valid && country.touched">El Pais no es correcto</span>
+    </p>
+    <p>
+      <label for="ciudad">Ciudad</label>
+      <input type="text" name="ciudad" #city="ngModel"[(ngModel)]="user.city" id="ciudad" class="form-control" required>
+      <span *ngIf="!city.valid && city.touched">La ciudad no es correcta</span>
+    </p>
+    <p>
+      <label for="empresa">Empresa</label>
+      <input type="text" name="empresa" #company="ngModel"[(ngModel)]="user.company" id="empresa" class="form-control" required>
+      <span *ngIf="!company.valid && company.touched">La empresa no es correcta</span>
+    </p>
+    <p>
+      <label for="ruc">RUC</label>
+      <input type="text" name="ruc" #ruc="ngModel"[(ngModel)]="user.ruc" id="ruc" class="form-control" required>
+      <span *ngIf="!ruc.valid && ruc.touched">El ruc no es correcta</span>
+    </p>
+    <input type="submit" value="{{ title }}" class="btn btn-primary" [disabled]="!registerForm.form.valid">
+  </form>
+</div>

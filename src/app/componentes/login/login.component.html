@@ -1,0 +1,39 @@
+<div id="fondo">
+  <div class="wrapper">
+    <div id="formContent" class="text-center">
+
+      <!-- Logo -->
+      <div class="logo ">
+        <img src="../../../assets/img/agrocloud-logo.png" class="img-fluid" alt="Logo" />
+      </div>
+
+      <!-- Titulos -->
+      <h2 class="titulo text-center"> Iniciar sesión </h2>
+
+      <!-- Login Form -->
+      <form #loginForm="ngForm" (ngSubmit)="onSubmit()" class="form">
+        <input name="email" #email="ngModel" [(ngModel)]="user.email" type="email" class="input-form" placeholder="Correo electronico"
+          required>
+          <p class="text-danger" *ngIf="!email.valid && email.touched">El email es obligatorio</p>
+        <input name="password" #password="ngModel" [(ngModel)]="user.password" type="password" class="input-form" placeholder="Contraseña" required>
+        <p class="text-danger" *ngIf="!password.valid && password.touched">La contraseña es obligatoria</p>
+        <div class="form-check size-options form-option">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck1">
+            Recuerdame
+          </label>
+          <a href="" class="size-options pass fadeIn">¿Has olvidado tu contraseña?</a>
+        </div>
+        <button type="submit" class="btn-form">Iniciar sesión</button>
+      </form>
+
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <span class="size-options">¿Todavía no eres miembro? </span>
+        <a [routerLink]="['/registro']" class="underlineHover size-options" href="#">Registrate aquí</a>
+        <a [routerLink]="['/map']" href="">Mapa</a>
+      </div>
+
+    </div>
+  </div>
+</div>

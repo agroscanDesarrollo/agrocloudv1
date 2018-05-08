@@ -1,0 +1,24 @@
+<div id="sidebar" class="mostrar-sidebar sombra-sidebar">
+    <div (click)="ocultarSidebar()" class="btn-sidebar sombra-sidebar">
+        <i class="fas fa-caret-left"></i>
+    </div>
+    <nav class="nav">
+        <div>
+            <a class="nav-link">
+                <i class="fas fa-leaf nav-icon"></i><br>Cultivos
+            </a>
+        </div>
+        <div class="nav-right">
+            <a href="#" class="nav-link">
+                <i class="fas fa-question nav-icon"></i><br>Ayuda
+            </a>
+            <a class="nav-link">
+                <i class="fas fa-user nav-icon"></i><br>Perfil
+            </a>
+        </div>
+    </nav>
+    <div class="sidebar-container">
+        <router-outlet></router-outlet>
+    </div>
+
+</div>

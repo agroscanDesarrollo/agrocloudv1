@@ -1,0 +1,100 @@
+body{
+    background: lightsteelblue !important;
+}
+.navigation.col-lg-12{
+    margin-top: 10px;
+}
+.jumbotron{
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 2px gray;
+}
+.navbar-nav .active{
+    border-bottom: 3px solid rgb(111, 160, 224) !important;
+}
+
+.navbar-default .navbar-nav>li>a:hover{
+    transition: all 300ms;
+    border-bottom: 3px solid rgb(111, 160, 224);
+}
+
+.navbar-default .navbar-nav>li>a{
+    transition: all 300ms;
+    border-bottom: 3px solid transparent;
+}
+
+.boton_transiciones{
+    padding: 10px;
+    background: red;
+    color: white;
+    border-radius: 20px;
+    border:1px solid blue;
+    transition: all 0.25s;
+
+}
+
+.boton_transiciones:hover{
+    text-decoration: none;
+    color:white;
+    cursor: pointer;
+    border-radius: 20px;
+    background: #ccc;
+    border: 1px solid red;
+
+}
+
+.caja_animada{
+    margin-top: 10px;
+    background: green;
+    border: 5px solid black;
+    width: 200px;
+    height: 200px;
+    /*
+    animation-name: rotacion;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    */
+}
+
+@keyframes rotacion{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes deslizamiento{
+    0%{
+        margin-left: 0px;
+    }
+    25%{
+        
+        background: red;
+        
+    }
+    50%{
+        margin-left: 400px;
+        border-radius: 1000px;
+    }
+    75%{
+        margin-left: 0px;
+        background: yellow;
+        border-radius: 0px;
+    }
+    100%{
+        background: green;
+    }
+}
+
+@keyframes deslizamiento1{
+    from{
+        margin-left: 0px;
+    }
+    to{
+        margin-left: 400px;
+        background: red;
+    }
+}
