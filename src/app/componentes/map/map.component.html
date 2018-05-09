@@ -4,7 +4,7 @@
     </div>
     <nav class="nav">
         <div>
-            <a class="nav-link">
+            <a [routerLink]="'/'" class="nav-link">
                 <i class="fas fa-leaf nav-icon"></i><br>Cultivos
             </a>
         </div>
@@ -12,13 +12,33 @@
             <a href="#" class="nav-link">
                 <i class="fas fa-question nav-icon"></i><br>Ayuda
             </a>
-            <a class="nav-link">
+            <a [routerLink]="'/profile'" class="nav-link">
                 <i class="fas fa-user nav-icon"></i><br>Perfil
             </a>
         </div>
     </nav>
     <div class="sidebar-container">
-        <router-outlet></router-outlet>
+        <mat-card class="card-container">
+            <mat-list>
+                <mat-list-item>
+                    <i mat-list-icon class="fab fa-envira"></i>
+                    <h4 mat-line>Cultivo 1</h4>
+                    <p mat-line>Fecha</p>
+                </mat-list-item>
+            </mat-list>
+        </mat-card>
+        <mat-card class="card-container">
+            <mat-list>
+                <mat-list-item>
+                    <i mat-list-icon class="fab fa-envira card-icon"></i>
+                    <h4 mat-line>Cultivo 1</h4>
+                    <p mat-line>Fecha</p>
+                </mat-list-item>
+            </mat-list>
+        </mat-card>
     </div>
 
+</div>
+<div class="map-container">
+    <div id="map"></div>
 </div>

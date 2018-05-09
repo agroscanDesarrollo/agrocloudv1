@@ -6,7 +6,7 @@ declare var jQuery: any;
 declare var $: any;
 
 @Component({
-  selector: 'app-map',
+  selector: 'map',
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.css']
 })

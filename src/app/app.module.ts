@@ -8,6 +8,11 @@ import { FormsModule } from '@angular/forms';
 // importante para las animaciones
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+// Material design
+import { MatInputModule, MatSelectModule,
+  MatCardModule, MatListModule, MatIconModule } from '@angular/material';
+
+
 // Importar nuestro nuevo modulo
 import { ModuloEmailModule } from './moduloemail/moduloemail.module';
 import { AdminModule } from './admin/admin.module';
@@ -39,6 +44,9 @@ import { MapComponent } from './componentes/map/map.component';
     LoginComponent,
     MapComponent
   ],
+  exports: [
+    MapComponent
+  ],
   imports: [
     BrowserModule,
     FormsModule,
@@ -46,7 +54,11 @@ import { MapComponent } from './componentes/map/map.component';
     routing,
     ModuloEmailModule,
     AdminModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatCardModule,
+    MatListModule,
+    MatIconModule
     //AdminRoutingModule
   ],
   providers: [
