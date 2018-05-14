@@ -45,6 +45,7 @@ export class LoginComponent implements OnInit{
                             }else{
                                 console.log(this.identity);
                                 console.log(this.token);
+                                this._router.navigate(['map']);
                             }
                         },
                         error=>{

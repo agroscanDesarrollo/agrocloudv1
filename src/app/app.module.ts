@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 
+
 //importante para two way data binding
 import { FormsModule } from '@angular/forms';
 
@@ -30,6 +31,7 @@ import { appRoutingProviders, routing } from './app.routing';
 import { LoginComponent } from './componentes/login/login.component';
 import { RegisterComponent } from './componentes/register/register.component';
 import { MapComponent } from './componentes/map/map.component';
+import { Ges_imagenes } from './componentes/ges_imagenes/ges_imagenes.component';
 
 //import { AdminRoutingModule } from './admin/admin-routing.module';
 
@@ -42,7 +44,8 @@ import { MapComponent } from './componentes/map/map.component';
     AppComponent,    
     RegisterComponent,
     LoginComponent,
-    MapComponent
+    MapComponent,
+    Ges_imagenes
   ],
   exports: [
     MapComponent

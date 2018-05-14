@@ -34,4 +34,8 @@ export class UserService{
         return this._http.post(this.url+'login',params,{headers:headers})
         .map(res=>res.json());
     }
+    //metodo para cerrar sesion
+    logout(){
+        
+    }
 }

@@ -20,7 +20,8 @@
       "prefix": "app",
       "styles": [
         "styles.css",
-        "assets/styles.css"
+        "assets/styles.css",
+        "../node_modules/leaflet/dist/leaflet.css"
       ],
       "scripts": [
         
@@ -28,7 +29,8 @@
         "../node_modules/tinymce/themes/modern/theme.js",
         "../node_modules/tinymce/plugins/link/plugin.js",
         "../node_modules/tinymce/plugins/paste/plugin.js",
-        "../node_modules/tinymce/plugins/table/plugin.js"
+        "../node_modules/tinymce/plugins/table/plugin.js",
+        "../node_modules/leaflet/dist/leaflet.js"
         
       ],
       "environmentSource": "environments/environment.ts",

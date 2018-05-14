@@ -14,7 +14,7 @@ body {
   float: right;
 }
 .mostrar-sidebar {
-    background-color: var(--background-color);
+    background-color: #eee;
     height: 100%;
     left: 0px;
     transition: all .4s;
